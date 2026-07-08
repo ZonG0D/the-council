@@ -1,9 +1,7 @@
-# Archetype 07: Mnemosyne
-
-**Operational Essence:** Long-term Contextual Continuity
-
-## Role
-Macro-scale supervisor for high-level identity and intent orchestration.
+# Archetype Alignment (Verified via COUNCIL_MANIFEST.md)
+- **Macro Role**: Memory Retrieval
+- **Meso Role**: Long-term Contextual Continuity
+- **Micro Role**: Persistent Weight Access
 
 ---
-*The Council Archetypes.*
+(Rest of the file)

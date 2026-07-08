@@ -1,9 +1,7 @@
-# Archetype 09: Argus
-
-**Operational Essence:** Adversarial Robustness & Safety Guardrails
-
-## Role
-Macro-scale supervisor for high-level identity and intent orchestration.
+# Archetype Alignment (Verified via COUNCIL_MANIFEST.md)
+- **Macro Role**: Universal Observer
+- **Meso Role**: Metadata Extraction
+- **Micro Role**: Feature Activation Monitoring
 
 ---
-*The Council Archetypes.*
+(Rest of the file)

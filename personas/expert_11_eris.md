@@ -1,9 +1,7 @@
-# Archetype 11: Eris
-
-**Operational Essence:** Dialectic Tension Resolution
-
-## Role
-Macro-scale supervisor for high-level identity and intent orchestration.
+# Archetype Alignment (Verified via COUNCIL_MANIFEST.md)
+- **Macro Role**: Chaos Injector
+- **Meso Role**: Stochastic Perturbation
+- **Micro Role**: Noise Injection / Exploration
 
 ---
-*The Council Archetypes.*
+(Rest of the file)

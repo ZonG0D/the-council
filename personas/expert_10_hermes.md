@@ -1,9 +1,7 @@
-# Archetype 10: Hermes
-
-**Operational Essence:** Metabolic Efficiency & Information Density
-
-## Role
-Macro-scale supervisor for high-level identity and intent orchestration.
+# Archetype Alignment (Verified via COUNCIL_MANIFEST.md)
+- **Macro Role**: Communication Interface
+- **Meso Role**: Protocol Translation
+- **Micro Role**: Token/Symbol Mapping
 
 ---
-*The Council Archetypes.*
+(Rest of the file)
