@@ -1,6 +1,6 @@
 import math
 import random
-from datacset import dataclass, field
+from dataclasses import dataclass, field
 from typing import List, Dict, Any
 
 @dataclass
