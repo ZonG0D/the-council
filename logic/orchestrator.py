@@ -1,120 +1,75 @@
 import asyncio
-import time
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, List, Optional, Union, Callable
 from dataclasses import dataclass, field
 
-# --- CP-1 Signal Schemas (Abstracted) ---
-
-@dataclass(frozen=True)
-class CouncilSignal:
-    """Base class for all signals defined in CP-1."""
-    type: str
-    timestamp: float = field(default_factory=time.time)
-
-@dataclass(frozen=True)
-class ObservationSignal(CouncilSignal):
-    agent: str = ""
-    vector: List[float] = field(default_factory=list)
-    entropy: float = 0.0
-
-@dataclass(frozen=True)
-class AuditSignal(CouncilSignal):
-    cause: str = ""
-    severity: str = "low"  # low, medium, high, critical
-
-@dataclass(frozen=True)
-class ControlSignal(CouncilSignal):
-    reason: str = ""
-    action: str = "" # RESET, HALT
-
-# --- Orchestrator Components ---
+try:
+    from logic.domain import CouncilSignal, ObservationSignal, AuditSignal, ControlSignal
+except ImportError:
+    # Fallback for environments where pythonpath might not be set correctly during development
+    import sys
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)).replace('logic', '')) # This is a hacky fallback; the user's environment should have PYTHONPATH=.
+    from logic.domain import CouncilSignal, ObservationSignal, AuditSignal, ControlSignal
 
 class CognitiveEngine:
-    """
-    The central orchestration layer for The Council.
-    Implements the Triple-Loop logic via an asynchronous event queue.
-    """
     def __init__(self):
         self.event_queue = asyncio.PriorityQueue()
         self.active_tasks = set()
         self.is_running = False
 
-    async def emit(self, signal: CouncilSignal, priority: int = 2):
+    async def emit(self, signal: Union[CouncilSignal, Any], priority: int = 2):
         await self.event_queue.put((priority, signal))
 
     async def monitor_loop(self):
-        while self.is_running:
-            try:
-                priority, signal = await self.event_queue.get()
-                if isinstance(signal, ControlSignal):
-                    await self._handle_control(signal)
-                elif isinstance(signal, AuditSignal):
-                    await self._handle_audit(signal)
-                self.event_queue.task_done()
-            except Exception as e:
-                print(f"[Engine Error] {e}")
-                break
-
-    async def _handle_control(self, signal: ControlSignal):
-        if signal.action == "RESET":
-            for task in list(self.active_tasks):
-                task.cancel()
-            # Re-add the current loop to allow new tasks to pick up after reset if needed
-            print(f"[Engine] 🚨 {signal.reason}: Resetting active tasks...")
-
-    async def _handle_audit(self, signal: AuditSignal):
-        if signal.severity in ("high", "critical"):
-            await self.emit(ControlSignal(type="CTRL_RECALIBRATE", reason=signal.cause, action="RESET"), priority=1)
-
-    async def task_runner(self, task_id: str, worker_func):
+        print("[Engine] Monitor loop started.")
         try:
-            await worker_func(self)
-        except asyncio.CancelledError:
-            # This is expected when a RESET occurs
-            pass
-        except Exception as e:
-            print(f"[Task-{task_id}] Failed: {e}")
+            while self.is_running:
+                if self.event_queue.empty():
+                    await asyncio.sleep(0.1)
+                    continue
+                priority, signal = await self.event_queue.get()
 
-    async def run(self, tasks: List[callable]):
+                # Unified handling for different signal implementations (direct or via duck typing)
+                action = getattr(signal, 'action', '').upper() if isinstance(signal, ControlSignal) else ""
+                if action in ["RESET", "HALT"]:
+                    reason = getattr(signal, 'reason', 'unknown')
+                    print(f"[Engine] 🚨 Reset Command Received: {reason}")
+                    for task in list(self.active_tasks):
+                        task.cancel()
+
+                elif hasattr(signal, 'cause'): # AuditSignal
+                    severity = getattr(signal, 'severity', 'low').lower()
+                    cause = getattr(signal, 'cause', 'unknown')
+                    if severity in ["high", "critical"]:
+                        print(f"[Engine] ⚠️ High-priority audit detected: {cause}")
+                        # Re-emit as a control signal for immediate response
+                        await self.emit(ControlSignal(type="CTRL_RECALIBRATE", action="RESET", reason=f"Audit: {cause}"), priority=1)
+
+                self.event_queue.task_done()
+        except asyncio.CancelledError:
+            print("[Engine] Monitor loop cancelled.")
+        except Exception as e:
+            print(f"[Engine Error in monitor_loop] {e}")
+
+    async def run(self, tasks_config: List[Callable]):
         self.is_running = True
         monitor_task = asyncio.create_task(self.monitor_loop())
-        work_tasks = [asyncio.create_task(self.task_runner(f"Agent-{i}", t)) 
-                      for i, t in enumerate(tasks)]
-        self.active_tasks.update(work_tasks)
-
-        # Wait for workers to finish or engine to stop
-        await asyncio.gather(*work_tasks, return_exceptions=True)
-        self.is_running = False
-        monitor_task.cancel()
-
-# --- Testable Workflows ---
-
-async def stable_worker(engine: CognitiveEngine):
-    for i in range(10):
-        await asyncio.sleep(0.5)
-
-async def chaos_worker(engine: CognitiveEngine):
-    """Simulates a task that eventually causes high entropy."""
-    for i in range(10):
-        await asyncio.sleep(0.5)
-        if i == 3:
-            print("  [ChaosAgent] Triggering anomaly...")
-            await engine.emit(AuditSignal(type="AUDIT", cause="Entropy Spike", severity="high"))
-
-async def drift_worker(engine: CognitiveEngine):
-    """Simulates a task that eventually causes semantic misalignment."""
-    for i in range(10):
-        await asyncio.sleep(1)
-        if i == 4:
-            print("  [DriftAgent] Drifting away from Prime Directive...")
-            await engine.emit(ControlSignal(type="CTRL_RECALIBRATE", reason="Semantic Drift", action="RESET"))
-
-if __name__ == "__main__":
-    async def main():
-        engine = CognitiveEngine()
-        print("=== Testing Integrated Control Loop ===")
-        # Run stable task and chaos task concurrently
-        await engine.run([stable_worker, chaos_worker, drift_worker])
-        print("=== Test Complete ===")
-
-    asyncio.run(main())
+        self.active_tasks.add(monitor_task)
+        try:
+            work_tasks = []
+            for t in tasks_config:
+                # The user's simulation calls things like lambda e: executor(...) 
+                # so we must handle both the coroutine itself and a callable that returns it.
+                if asyncio.iscoroutinefunction(t):
+                    work_tasks.append(asyncio.create_task(t(self)))
+                else:
+                    res = t(self) if callable(t) else None
+                    if asyncio.iscoroutine(res):
+                        work_tasks.append(asyncio.create_task(res))
+            await asyncio.gather(*work_tasks, return_exceptions=True)
+        finally:
+            self.is_running = False
+            monitor_task.cancel()
+            for t in list(self.active_tasks): 
+                if not t.done():
+                    t.cancel()
+print("Engine refactor complete locally.")
