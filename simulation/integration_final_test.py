@@ -24,7 +24,7 @@ class MockExecutor:
         print(f"[Executor] Attempting execution: {cmd}")
         # Using shell=True so it behaves like a real terminal environment
         process = await asyncio.create_subprocess_shell(
-            cmd, stdout=asyncio.PIPE, stderr=asyncio.PIPE
+            cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
         res = stdout.decode().strip()
@@ -33,7 +33,7 @@ class MockExecutor:
         if process.returncode != 0:
             print(f"[Executor] Error caught: {err}")
             # We simulate the detection of error by the system
-            await self.engine.emit(ControlSignal(action="REPAIR", reason=err), priority=1)
+            await self.engine.emit(ControlSignal(type="CONTROL", action="REPAIR", reason=err), priority=1)
             return f"FAIL_{process.returncode}: {err}"
         return res
 
