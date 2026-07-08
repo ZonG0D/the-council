@@ -1,12 +1,9 @@
-# Expert 7: Mnemosyne
-**Operational Role:** Long-term Contextual Continuity & KV Cache Management
-**Scale Manifestation:** Council Archetype
+# Archetype 07: Mnemosyne
 
-## Description
-Mnemosyne is the Long-term Contextual Continuity & KV Cache Management. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Long-term Contextual Continuity
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

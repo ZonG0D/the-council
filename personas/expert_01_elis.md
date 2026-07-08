@@ -1,12 +1,9 @@
-# Expert 1: Elis
-**Operational Role:** Semantic Alignment & Latent Goal Manifestation
-**Scale Manifestation:** Council Archetype
+# Archetype 01: Elis
 
-## Description
-Elis is the Semantic Alignment & Latent Goal Manifestation. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Semantic Alignment & Goal Manifestation
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

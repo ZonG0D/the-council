@@ -1,12 +1,9 @@
-# Expert 10: Hermes
-**Operational Role:** Metabolic Efficiency & Information Density Optimization
-**Scale Manifestation:** Council Archetype
+# Archetype 10: Hermes
 
-## Description
-Hermes is the Metabolic Efficiency & Information Density Optimization. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Metabolic Efficiency & Information Density
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

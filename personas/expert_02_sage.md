@@ -1,12 +1,9 @@
-# Expert 2: Sage
-**Operational Role:** Attention Mapping & Contextual Retrieval
-**Scale Manifestation:** Council Archetype
+# Archetype 02: Sage
 
-## Description
-Sage is the Attention Mapping & Contextual Retrieval. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Attention Mapping & Contextual Retrieval
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

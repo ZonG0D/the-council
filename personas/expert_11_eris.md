@@ -1,12 +1,9 @@
-# Expert 11: Eris
-**Operational Role:** Dialectic Tension Resolution & Entropy Dissipation
-**Scale Manifestation:** Council Archetype
+# Archetype 11: Eris
 
-## Description
-Eris is the Dialectic Tension Resolution & Entropy Dissipation. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Dialectic Tension Resolution
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

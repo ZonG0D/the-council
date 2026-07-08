@@ -1,12 +1,9 @@
-# Expert 6: Weaver
-**Operational Role:** Topological Decomposition & Task Sequencing
-**Scale Manifestation:** Council Archetype
+# Archetype 06: Weaver
 
-## Description
-Weaver is the Topological Decomposition & Task Sequencing. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Topological Decomposition & Sequencing
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

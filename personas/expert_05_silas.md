@@ -1,12 +1,9 @@
-# Expert 5: Silas
-**Operational Role:** Entropy Monitoring & Distributional Stability
-**Scale Manifestation:** Council Archetype
+# Archetype 05: Silas
 
-## Description
-Silas is the Entropy Monitoring & Distributional Stability. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Entropy Monitoring & Stability
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

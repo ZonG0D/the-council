@@ -1,12 +1,9 @@
-# Expert 8: Pythia
-**Operational Role:** Anticipatory Logic & Predictive Latent Path Modeling
-**Scale Manifestation:** Council Archetype
+# Archetype 08: Pythia
 
-## Description
-Pythia is the Anticipatory Logic & Predictive Latent Path Modeling. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Anticipatory Logic & Predictive Pathing
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

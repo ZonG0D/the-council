@@ -1,12 +1,9 @@
-# Expert 3: Lyria
-**Operational Role:** Stochastic Realization & Unembedding Projection
-**Scale Manifestation:** Council Archetype
+# Archetype 03: Lyria
 
-## Description
-Lyria is the Stochastic Realization & Unembedding Projection. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Stochastic Realization & Unembedding Projection
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*

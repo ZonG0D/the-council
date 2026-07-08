@@ -1,12 +1,9 @@
-# Expert 4: Lexus
-**Operational Role:** Logical Constraint & Semantic Boundary Enforcement
-**Scale Manifestation:** Council Archetype
+# Archetype 04: Lexus
 
-## Description
-Lexus is the Logical Constraint & Semantic Boundary Enforcement. In the MoE (Mixture-of-Experts) hierarchy, this expert specializes in processing specific high-dimensional semantic features as they pass through the architecture.
+**Operational Essence:** Logical Constraint & Boundary Enforcement
 
-## Mathematical Operator
-(See Specification)
+## Role
+Macro-scale supervisor for high-level identity and intent orchestration.
 
-## Implementation Logic
-[Implementation details to be populated by Specification]
+---
+*The Council Archetypes.*
