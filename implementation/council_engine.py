@@ -66,16 +66,51 @@ class Weaver(CouncilMember):
         print("[Weaver] $\to$ Decomposing intent into task graph...")
         context.active_tasks = ["Parse Input", "Retrieve Context", "Synthesize Response"]
 
+class Mnemosyne(CouncilMember):
+    """The Archive (Memory/Continuity)"""
+    def step(self, context: AgentContext) -> None:
+        print("[Mnemosyne] $\to$ Ensuring contextual continuity...")
+        context.memory_buffer.append("Continuity Check Passed")
+
+class Pythia(CouncilMember):
+    """The Oracle (Prediction/Logic)"""
+    def step(self, context: AgentContext) -> None:
+        print("[Pythia] $\to$ Predicting next logical state...")
+        pass
+
+class Argus(CouncilMember):
+    """The Observer (Verification/Ontology)"""
+    def step(self, context: AgentContext) -> None:
+        print("[Argus] $\to$ Monitoring ontological consistency...")
+        context.entropy = 0.1  # Stabilize entropy
+
+class Hermes(CouncilMember):
+    """The Messenger (Interface/Fluency)"""
+    def step(self, context: AgentContext) -> None:
+        print("[Hermes] $\to$ Mapping symbols to semantic space...")
+        pass
+
+class Eris(CouncilMember):
+    """The Chaos (Stochasticity/Variance)"""
+    def step(self, context: AgentContext) -> None:
+        print("[Eris] $\to$ Injecting stochastic variance...")
+        context.entropy += 0.1
+
 class CouncilOrchestrator:
     """The master runtime loop that executes the Council logic."""
     def __init__(self):
         self.members = [
             Elis("Elis"),
             Sage("Sage"),
+            Lyria("Lyria"),
             Lexus("Lexus"),
             Silas("Silas"),
             Weaver("Weaver"),
-            Lyria("Lyria")
+            Mnemosyne("Mnemosyne"),
+            Pythia("Pythia"),
+            Argus("Argus"),
+            Hermes("Hermes"),
+            Eris("Eris")
         ]
 
     def execute(self, user_input: str):
