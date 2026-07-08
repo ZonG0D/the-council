@@ -1,0 +1,10 @@
+# Council Orchestration Framework Requirements
+# Core runtime dependencies and environments.
+
+# Logic Layer Dependencies (Simulation only)
+pytest>=7.0.0
+numpy>=1.23.0
+torch>=2.0.0  # Required for Meso-Scale tensor transforms
+
+# Protocols & Semantic Analysis
+scipy>=1.9.0
