@@ -1,11 +1,16 @@
 import os
 import sys
+repo_root = os.path.abspath('/home/anonz/the-council')
+if repo_root not in sys.path:
+    sys.path.append(repo_root)
+import os
+import sys
+import os
+import sys
 import asyncio
 import subprocess
 
 # Add current directory and logic directory to path for simulation purposes
-sys.path.append(os.getcwd())
-sys.path.append(os.path.join(os.getcwd(), 'logic'))
 
 try:
     from orchestrator import CognitiveEngine, ControlSignal

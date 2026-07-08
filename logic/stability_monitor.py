@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append("/home/anonz/the-council")
 import asyncio
 import os
 import sys
@@ -5,8 +8,6 @@ from dataclasses import dataclass
 from typing import List, Optional
 
 # Ensure project structure is in path
-sys.path.append(os.getcwd())
-sys.path.append(os.path.join(os.getcwd(), 'logic'))
 
 try:
     from logic.orchestrator import CognitiveEngine, ControlSignal

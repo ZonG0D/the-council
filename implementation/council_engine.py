@@ -1,18 +1,12 @@
-import math
+import os
+import sys
+repo_root = os.path.abspath('/home/anonz/the-council')
+if repo_root not in sys.path:
+    sys.path.append(repo_root)
+from logic.domain import AgentContext
 import random
-from dataclasses import dataclass, field
+from dataclasses import field
 from typing import List, Dict, Any
-
-@dataclass
-class AgentContext:
-    """The shared state passed between Council members during a reasoning cycle."""
-    raw_input: str
-    intent_vector: List[float] = field(default_factory=lambda: [0.0]*8)
-    memory_buffer: List[str] = field(default_factory=list)
-    active_tasks: List[str] = field(default_factory=list)
-    constraints: List[str] = field(default_factory=list)
-    entropy: float = 0.0
-    is_aborted: bool = False
 
 class CouncilMember:
     def __init__(self, name: str):

@@ -1,10 +1,15 @@
+import os
+import sys
+repo_root = os.path.abspath('/home/anonz/the-council')
+if repo_root not in sys.path:
+    sys.path.append(repo_root)
+import os
+import sys
 import asyncio
 import os
 import subprocess
 import sys
 
-# Ensure the root directory is in PYTHONPATH for module resolution
-sys.path.append(os.getcwd())
 
 from logic.orchestrator import CognitiveEngine, ControlSignal, AuditSignal
 from logic.domain import AgentContext

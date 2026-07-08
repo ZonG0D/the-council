@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append("/home/anonz/the-council")
 import asyncio
 import sys
 import os
@@ -5,14 +8,12 @@ from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
 
 # Correcting path for local development and execution
-sys.path.append('/home/anonz/the-council')
 
 try:
     from logic.orchestrator import CognitiveEngine, ControlSignal
     from logic.signal_parser import SignalParser
     # We realized ShellExecutor is part of logic_distributed in the current layout
     import sys as mod_sys
-    mod_sys.path.append('/home/anonz/the-council')
     from logic_distributed import ShellExecutor
 except ImportError as e:
     print(f"Import Error: {e}")

@@ -1,9 +1,8 @@
 import os
 import sys
-import numpy as np
+sys.path.append("/home/anonz/the-council")
 
-# Ensure root is in path for logical imports
-sys.path.append(os.getcwd())
+import numpy as np
 
 from implementation.layers.meso.semantic_transformer import SemanticTransformer
 
