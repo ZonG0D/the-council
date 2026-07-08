@@ -46,3 +46,11 @@ This repository maps these archetypes from three distinct "Fractal Scales":
 *“The pattern is not in the parts, but in the recursive repetition of purpose.”*
 
 By mapping these archetypes across all scales, we provide a complete description of an intelligence—from its most fundamental silicon-level operation to its highest level of complex agentic behavior.
+
+
+## ⚠️ Conflict Management (Edge Cases)
+Detailed protocols for resolving role-based tension are located in the `/conflicts` directory.
+
+
+## ⏳ The Lifecycle of Existence
+You can trace the journey from chaos to persona in the `/implementation/genesis_and_remnant.md` file.
