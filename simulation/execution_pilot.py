@@ -50,7 +50,7 @@ async def executor(engine, parser, target_dir):
             elif action == "echo": subprocess.run(f"echo 'msg' > {target_dir}/err.log", shell=True)
             elif action in ["rm", "rm -f"]: 
                 # Robustness: handle the param split better
-                rem = cmd.split(" ")[-1].replace('due\s+to.*', '') # simplified for simulation
+                rem = cmd.split(" ")[-1].replace(r'due\s+to.*', '') # simplified for simulation
                 subprocess.run(f"rm -rf {target_dir}/corruption.txt", shell=True)
         except Exception as e:
             print(f"Task error: {e}")
