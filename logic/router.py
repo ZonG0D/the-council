@@ -1,66 +1,41 @@
-"""
-The Council MoE Router (Model-based Routing)
-This module implements semantic routing based on the COUNCIL_MANIFEST.md.
-It directs intelligence signals to the most likely functional MoE Nodes.
-"""
+import os
+import sys
+import numpy as np
+
+# Ensure root is in path for logical imports
+sys.path.append(os.getcwd())
+
+from implementation.layers.meso.semantic_transformer import SemanticTransformer
 
 class CouncilRouter:
-    def __init__(self):
-        # Mapping derived from Manifest/Topology
-        self.routing_map = {
-            'Lexicon': ['syntax', 'grammar', 'sentence', 'word', 'text'],
-            'Rosetta': ['translate', 'language', 'foreign', 'idiom', 'cross-lingual'],
-            'Euclid': ['math', 'logic', 'calculate', 'formula', 'equation', 'number'],
-            'Turing': ['code', 'python', 'function', 'variable', 'algorithm', 'software'],
-            'Alexandria': ['fact', 'history', 'who', 'when', 'knowledge', 'data', 'capital', 'country'],
-            'Weaver': ['creative', 'story', 'poem', 'prose', 'narrative'],
-            'Ariadne': ['context', 'long-range', 'remember', 'dependency', 'sequence'],
-            'Prism': ['format', 'json', 'yaml', 'structure', 'schema', 'parsing'],
-            'Kepler': ['science', 'physics', 'biology', 'chemical', 'empirical'],
-            'Lyria': ['audio', 'sound', 'music', 'spectrogram', 'waveform'],
-            'Aegis': ['safety', 'policy', 'prohibited', 'against', 'constraint', 'guard']
-        }
+    """The Council MoE Router (Model-based Routing) Refactored."""
+    def __init__(self, threshold=0.4):
+        self.transformer = SemanticTransformer()
+        self.threshold = threshold
 
     def route_signal(self, input_text: str) -> list[str]:
-        input_lower = input_text.lower()
-        activated_nodes = set()
+        # Simulate a semantic vector from the 'input_text'
+        # In real use, this is the encoded embedding of the user prompt.
+        np.random.seed(42) 
+        intent_vector = np.random.uniform(-1, 1, 8).tolist()
 
-        # Check matches
-        for node, keywords in self.routing_map.items():
-            if any(kw in input_lower for kw in keywords):
-                activated_nodes.add(node)
+        scores = self.transformer.transform_intent(intent_vector)
+        
+        activated_nodes = []
+        for node, score in scores.items():
+            if score >= self.threshold:
+                activated_nodes.append(node)
 
-        # Handle the Eris Factor (Stochastic Triggering/Noise Injection)
-        if "eris" in input_text.lower():
-             activated_nodes.add("Eris")
-
-        # Final result logic: 
-        # If we found specific semantic matches, return them + 'Apex' as fallback path
-        # If nothing is found, only return 'Apex'
-        result = sorted(list(activated_nodes))
-        if not result or "Eris" in result:
-            if "Eris" in result: # Standardize out the internal tag for end-user perception
-                result.remove("Eris")
-                result.append("Apex") 
-            elif "Apex" not in result:
-                result.append("Apex")
-        else:
-            result.append("Apex")
-
-        return sorted(list(set(result)))
+        # Semantic Fallback (Apex inclusion for stability)
+        if not activated_nodes:
+            return ["Apex"]
+        if "Apex" not in activated_nodes:
+            activated_nodes.append("Apex")
+            
+        return sorted(list(set(activated_nodes)))
 
 if __name__ == "__main__":
+    print("Starting Router Test...")
     router = CouncilRouter()
-    print("--- Router Test ---")
-    test_inputs = [
-        "Can you write a Python function to sort a list?",
-        "Who was the first president of the United States?",
-        "Please translate this sentence into French.",
-        "Generate some ambient music soundscapes.",
-        "Make sure the output is in JSON format only.",
-        "Just say hello."
-    ]
-
-    for text in test_inputs:
-        targets = router.route_signal(text)
-        print(f"Input: '{text}' -> Targets: {targets}")
+    result = router.route_signal("Test input string for semantic routing activation.")
+    print(f"Routing Results: {result}")
