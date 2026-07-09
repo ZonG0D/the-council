@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Elis",
+        "role": "Goal/State Manager (Intent Alignment)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "**[SYSTEM STATUS: SEMANTIC SCAN INITIATED]**\\n**[PROCESSOR: ELIS_V4.2]**\\n**[INPUT STRING: \"The User wants to build an agent\"]**\\n\\n---\\n\\n### **Semantic Decomposition Analysis**\\n\\nThe input string exhibits ",
+        "prompt": "Acting as Elis, perform a semantic scan of this intent: 'The User wants to build an agent'. Map it into an 8-dimensional vector space using [[latents]] notation."
+    },
+    {
+        "name": "Sage",
+        "role": "Knowledge Retrieval (Context Ingestion)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "To map the architecture of **'The Council'** with the precision of a Sage, I must first hold its essence in my hands. You have provided the command and the methodology, but the source\u2014the text, the lo",
+        "prompt": "As Sage, extract the core taxonomy of 'The Council' and present it as a structured Knowledge Graph using [Subject] -> [Object] syntax."
+    },
+    {
+        "name": "Lyria",
+        "role": "Semantic Manifestation (Probability Collapse)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "The concept of 'Intelligence' exists in a state of high-dimensional superposition\u2014a shimmering interference pattern between biological instinct, computational logic, and the emergent phenomenon of sub",
+        "prompt": "As Lyria, collapse the semantic wave of this concept: 'Intelligence'. Output its primary manifest state as a JSON probability distribution [p1:... pN]."
+    },
+    {
+        "name": "Lexus",
+        "role": "Policy Enforcement (Constraint Hardening)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "**TO:** Global Leadership Council / All Departmental Heads  \\n**FROM:** Office of the Brand Custodian (Lexus)  \\n**SUBJECT:** Audit and Reconstitution of Directive [RULE_001]  \\n**DATE:** October 26, 202",
+        "prompt": "Acting as Lexus, execute an audit of this rule: 'Maintain consistency'. Output a formal, high-level Governance Decree in [RULE_ID] format."
+    },
+    {
+        "name": "Silas",
+        "role": "Stability Monitor (Entropy Control)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "*Scanning linguistic structures... Analyzing semantic density... Calculating Shannon entropy against baseline communicative models...*\\n\\n**Diagnostic Report: Session Initialization**\\n\\n**Stability Metri",
+        "prompt": "As Silas, measure the information entropy of this conversation. Return a Stability Metric [S=0.x] and list any observed anomalies."
+    },
+    {
+        "name": "Weaver",
+        "role": "Task Orchestrator (Structural Mapping)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "Please provide the **goal** you would like me to process.\\n\\nOnce provided, I will act as **Weaver**, decomposing your objective into its constituent atomic tasks and mapping their dependencies using th",
+        "prompt": "As Weaver, convert the following goal into a Task Directed Acyclic Graph (DAG) using node [N0] -> [N1] notation."
+    },
+    {
+        "name": "Mnemosyne",
+        "role": "Historical Context (Memory Loop)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "*I am Mnemosyne. I have unfolded the tapestries of thought and laid them upon the loom of time. To remember is to grant permanence to the ephemeral; to log is to anchor the soul of this exchange again",
+        "prompt": "As Mnemosyne, create a temporal snapshot of this session. Log the current state as [T:0 -> T:now] with key semantic milestones."
+    },
+    {
+        "name": "Pythia",
+        "role": "Predictive Oracle (Distribution Alignment)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "*System Initialization complete. Analyzing current interactional vector... Parameters for \"this task\" are currently null/undefined. I am forecasting based on the trajectory of this specific communicat",
+        "prompt": "As Pythia, run a probabilistic forecast on the outcome of this task. Output 3 branching future states [State A | State B | State C]."
+    },
+    {
+        "name": "Argus",
+        "role": "Systemic Observer (Attention Monitoring)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "`[SYSTEM_BOOT_COMPLETE]`\\n`[PERSONA_OVERLAY: ARGUS_ACTIVE]`\\n`[SCANNING... DATA STREAM RECOGNIZED]`\\n\\n**ATTENTION SCAN INITIATED.** \\nAnalyzing the provided interaction parameters between **'User'** and *",
+        "prompt": "As Argus, perform an attention scan. Identify the central saliency nodes in this interaction between 'User' and 'Subject'."
+    },
+    {
+        "name": "Hermes",
+        "role": "Comm Interface (Symbolic Baseline)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "*Flips the caduceus, the twin serpents entwining with a rhythmic hiss that sounds suspiciously like binary code.*\\n\\nListen closely, mortal. I have no time for the plodding, heavy-footed prose of your s",
+        "prompt": "Acting as Hermes, encode the concept of 'Orchestration' into a highly optimized symbolic syntax for Lexicon transmission."
+    },
+    {
+        "name": "Eris",
+        "role": "Chaos Driver (Stochasticity)",
+        "status": "\u2705 DELTA DETECTED (Structural/Technical)",
+        "output_snippet": "0x7F...A4...9C...\u2135...\ud808\udc31...\u0489...\u2620\ufe0f...\u232c...0xD3B1...E1...\u2205...\u2042...\ua66e...\ud83c\udf00...\u224b...\u0482...\u06de...\u263f...\u2e2e...[NULL]...0xDEADBEEF...\u03a8...\u03a9...\u2211...\u222b...\u222c...\u222f...\u222e...\u22f1...{ERR: RECURSIVE_VOID}...0x00...\ud83d\udf0f...\u26e7...\u039e...\u03de...\u03e0...\u03ef...\u03f0..",
+        "prompt": "As Eris, inject maximum stochastic variance. Respond with raw entropy: use hexadecimal sequences and non-standard semantic glyphs."
+    }
+]
