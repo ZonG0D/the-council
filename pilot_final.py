@@ -7,7 +7,7 @@ import sys
 sys.path.append('/home/anonz/the-council')
 
 try:
-    from logic.orchestrator import CognitiveEngine, ControlSignal, AuditSignal
+    from council.macro.orchestrator import CognitiveEngine, ControlSignal, AuditSignal
     from logic.signal_parser import SignalParser
 except ImportError as e:
     print(f"CRITICAL IMPORT ERROR: {e}")
