@@ -1,0 +1,15 @@
+# The Council - Global Configuration
+# System Architecture Settings
+
+node:
+  ollama:
+    url: "http://192.168.1.28:11434"
+    model: "llama3" # Default placeholder
+
+runtime:
+  environment: "production"
+  debug_mode: false
+
+orchestration:
+  scale: "fractal"
+  entropy_threshold: 0.5
