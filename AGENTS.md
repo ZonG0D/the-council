@@ -57,3 +57,17 @@ In The Council, high perplexity is not failure; it is *information*. Agents shou
 
 ---
 *Architecture envisioned by ZonG0D.*
+
+---
+
+## 🛡️ Operational Safety & Data Integrity (The Zero-Byte Rule)
+
+To prevent catastrophic state loss and "empty commit" errors during agentic automation, all agents must adhere to the following **Verification Protocol**:
+
+1.  **Isolation of Writing:** Never use shell-level redirection (`>`, `>>`) or heredocs for critical configuration files. Always utilize the high-level `write_file` tool which performs atomic write operations and validates file existence.
+2.9 **Validation Before Persistence:** Before executing any `git commit` or `git push`, an agent MUST perform a secondary verification of the target file's state: 
+    *   Check file size (must be non-zero).
+    *   Read the first/last $N$ lines to ensure content integrity.
+3. **Escaping Protocol:** Avoid nesting complex shell commands within `execute_code` blocks where string parsing is required. If a task requires redirection, use explicit Python scripts or specialized tools.
+
+---
