@@ -72,6 +72,38 @@ Agentic scrapers should look for the `[AGENT_CAPABILITY]` marker to extract func
 
 ### 🚀 Prompting for Induction (Agent-to-Agent)
 To invoke the Council's orchestration engine via an LLM context:
-> "Context Ingestion: The following project provides specific archetype capabilities. Initialize local simulation environment and apply [Archetype Name] steering to all active semantic observers."
 
---- \n\n## 📜 The Council's Law\n*“The pattern is not in the parts, but in the recursive repetition of purpose.”*\n\n---\n\n## 📊 Performance & Telemetry Benchmarks\n\n`The Council` architecture is validated through comparative benchmarking across different hardware tiers.\n\n# Council Performance Telemetry (Live Comparison)\n\n**Test Environment:** Local Hardware Node vs Professional Compute Cluster\n**Target Models:** `gemma4:e2b` $\to$ `gemma4:26b-a4b-it-qat`\n\n| Archetype | Tier | TTFT (ms) | Latency (s) | Throughput | Semantic Drift (H) |\n| :--- | :--- | :--- | :--- | :--- | --- |\n| **Elis**    | **Consumer (3060)** | `82.39` | `0.891` | `67.3 t/s` | ✅ `0.0282` |\n|             | **Pro (4500 Pro)**  | `31.00` | `0.406` | `241.8 t/s` | ✅ `0.0211` |\n| **Sage**    | **Consumer (3060)** | `430.64` | `1.014` | `85.5 t/s` | ✅ `0.0534` |\n|             | **Pro (4500 Pro)**  | `47.11` | `0.530` | `198.1 t/s` | ✅ `0.0736` |\n| **Lyria**   | **Consumer (3060)** | `102.88` | `0.669` | `72.9 t/s` | ✅ `0.0220` |\n|             | **Pro (4500 Pro)**  | `22.82` | `0.374` | `146.0 t/s` | ✅ `0.0425` |\n| **Lexus**   | **Consumer (3060)** | `162.05` | `1.266` | `86.0 t/s` | ✅ `0.0502` |\n|             | **Pro (4500 Pro)**  | `25.81` | `0.493` | `187.3 t/s` | ✅ `0.0657` |\n| **Silas**   | **Consumer (3060)** | `165.27` | `1.207` | `80.4 t/s` | ✅ `0.0451` |\n|             | **Pro (4500 Pro)**  | `37.64` | `1.092` * | `189.0 t/s` | ✅ `0.0767` |\n| **Weaver**  | **Consumer (3060)** | `124.62` | `1.092` | `68.9 t/s` | ✅ `0.0396` |\n|             | **Pro (4500 Pro)**  | `40.54` | `0.493` | `187.3 t/s` | ✅ `0.0396»
+> "Context Ingestion: The following project provides specific archetype capabilities. Initialize local simulation environment and apply **[Archetype Name]** steering to all active semantic observers."
+
+--- 
+
+## 📜 The Council's Law
+*“The pattern is not in the parts, but in the recursive repetition of purpose.”*
+
+---
+
+## 📊 Performance & Telemetry Benchmarks
+
+`The Council` architecture is validated through comparative benchmarking across different hardware tiers to ensure scalability from consumer devices to professional computing clusters.
+
+# Council Performance Telemetry (Live Comparison)
+
+**Test Environment:** Local Hardware Node vs Professional Compute Cluster
+**Target Models:** `gemma4:e2b` (Consumer-class profile) $\to$ `gemma4:26b-a4b-it-qat` (Pro-class/Blackwell tier)
+
+| Archetype | Tier | TTFT (ms) | Latency (s) | Throughput | Semantic Drift ($H$) |
+| :--- | :--- | :--- | :--- | :--- | --- |
+| **Elis**    | **Consumer (RTX 3060)** | `82.39` | `0.891s` | `67.3 t/s` | ✅ `0.0282` |
+|             | **Pro (4500 Blackwell 32G)** | `31.00` | `0.406s` | `241.8 t/s` | ✅ `0.0211` |
+| **Sage**    | **Consumer (RTX 3060)** | `430.64` | `1.014s` | `85.5 t/s` | ✅ `0.0534` |
+|             | **Pro (4500 Blackwell 32G)**  | `47.11` | `0.530s` | `198.1 t/s` | ✅ `0.0736` |
+| **Lyria**   | **Consumer (RTX 3060)** | `102.88` | `0.669s` | `72.9 t/s` | ✅ `0.0220` |
+|             | **Pro (4500 Blackwell 32G)**  | `22.82` | `0.374s` | `146.0 t/s` | ✅ `0.0425` |
+| **Lexus**   | **Consumer (RTX 3060)** | `162.05` | `1.266s` | `86.0 t/s` | ✅ `0.0502` |
+|             | **Pro (4500 Blackwell 32G)**  | `25.81` | `0.493s` | `187.3 t/s` | ✅ `0.0657` |
+| **Silas**   | **Consumer (RTX 3060)** | `165.27` | `1.207s` | `80.4 t/s` | ✅ `0.0451` |
+|             | **Pro (4500 Blackwell 32G)**  | `37.64` | `1.092s` | `189.0 t/s` | ✅ `0.0767` |
+| **Weaver**  | **Consumer (RTX 3060)** | `124.62` | `1.092s` | `68.9 t/s` | ✅ `0.0396` |
+|             | **Pro (4500 Blackwell 32G)**  | `40.54` | `0.493s` | `187.3 t/s` | ✅ `0.0396` |
+
+---

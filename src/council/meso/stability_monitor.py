@@ -32,13 +32,13 @@ class StabilityMonitor:
         if isinstance(signal, AuditSignal):
             if signal.severity in ["high", "critical"]:
                 return ControlSignal(
-                    type="STABILIZE",
-                    origin_id=signal.origin_id,
-                    target_id="Orchestrator",
-                    sequence_id=500,
-                    action="HALT",
-                    reason=f"Critical Audit: {signal.cause}"
-                )
+     type="STABILIZE",
+     origin_id=signal.origin_id,
+     target_id="Orchestrator",
+     sequence_id=500,
+     action="HALT",
+     reason=f"Critical Audit: {signal.reason}"
+ )
 
         # 2. Entropy Spike Detection (Micro-scale Observation Monitoring)
         if isinstance(signal, ObservationSignal):
