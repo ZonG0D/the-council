@@ -108,7 +108,7 @@ class FractalOrchestrationEngine:
                 status_severity = "high" if entropy > 2.5 else "low"
                 await self.stability_queue.put(AuditSignal(
                     type="OBSERVATION", origin_id=current_node.agent, target_id="SYSTEM",
-                    sequence_id=int(time.time() * 1000), cause=f"Entropy: {entropy:.2f}", severity=status_severity
+                    sequence_id=int(time.time() * 1000), reason=f"Entropy: {entropy:.2f}", severity=status_severity
                 ))
                 self.execution_queue.task_done()
 
