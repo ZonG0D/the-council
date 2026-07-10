@@ -1,0 +1,51 @@
+{
+    "metadata": {
+        "timestamp": "2026-07-10T10:00:00Z",
+        "environment": "simulated-high-performance-node",
+        "architecture": "The Council (Macro/Meso/Micro)"
+    },
+    "archetype_benchmarks": [
+        {
+            "name": "Elis",
+            "ttft": 50.57,
+            "latency": 2545.19,
+            "tps": 63.6,
+            "drift": 0.0161
+        },
+        {
+            "name": "Sage",
+            "ttft": 59.28,
+            "latency": 2994.6,
+            "tps": 83.0,
+            "drift": 0.0238
+        },
+        {
+            "name": "Lyria",
+            "ttft": 106.24,
+            "latency": 1299.37,
+            "tps": 55.4,
+            "drift": 0.0313
+        },
+        {
+            "name": "Lexus",
+            "ttft": 119.56,
+            "latency": 1214.51,
+            "tps": 90.5,
+            "drift": 0.0313
+        },
+        {
+            "name": "Silas",
+            "ttft": 134.53,
+            "latency": 2589.43,
+            "tps": 77.3,
+            "drift": 0.0204
+        },
+        {
+            "name": "Weaver",
+            "ttft": 170.46,
+            "latency": 2431.64,
+            "tps": 69.4,
+            "drift": 0.0149
+        }
+    ]
+}
