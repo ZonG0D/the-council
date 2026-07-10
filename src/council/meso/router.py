@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.append("/home/anonz/the-council")
+sys.path.append('/home/anonz/projects/the-council')
 
 import numpy as np
 

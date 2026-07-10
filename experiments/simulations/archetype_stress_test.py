@@ -121,7 +121,7 @@ def main():
         })
 
     # Save full report to JSON for analysis
-    report_path = "/home/anonz/the-council/experiments/simulations/archetype_mapping_full.json"
+    report_path = "/home/anonz/projects/the-council/experiments/simulations/archetype_mapping_full.json"
     with open(report_path, 'w') as f:
         json.dump(results, f, indent=4)
     print(f"\n[SYSTEM] Comprehensive Mapping Report saved to {report_path}")

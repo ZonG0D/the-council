@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 # Ensure the path is set for imports within the testing environment
-sys.path.append('/home/anonz/the-council')
+sys.path.append('/home/anonz/projects/the-council')
 
 try:
     from council.macro.orchestrator import CognitiveEngine, ControlSignal, AuditSignal

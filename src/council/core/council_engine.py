@@ -1,6 +1,6 @@
 import os
 import sys
-repo_root = os.path.abspath('/home/anonz/the-council')
+repo_root = os.path.abspath('/home/anonz/projects/the-council')
 if repo_root not in sys.path:
     sys.path.append(repo_root)
 from council.core.domain import AgentContext

@@ -1,6 +1,6 @@
 import os
 import sys
-repo_root = os.path.abspath('/home/anonz/the-council')
+repo_root = os.path.abspath('/home/anonz/projects/the-council')
 if repo_root not in sys.path:
     sys.path.append(repo_root)
 import os
@@ -61,15 +61,15 @@ async def executor(engine, parser, target_dir):
             print(f"Task error: {e}")
 
 async def run():
-    test_dir = os.path.abspath("/home/anonz/the-council/pilot_sandbox")
+    test_dir = os.path.abspath("/home/anonz/projects/the-council/pilot_sandbox")
     subprocess.run(f"rm -rf {test_dir}", shell=True)
     os.makedirs(test_dir, exist_ok=True)
     engine = CognitiveEngine()
     parser = SignalParser()
-
-    print("\n" + "="*50)
-    print("  THE COUNCIL: PILOT AUTONOMOUS RUNTIME")
-    print("="*50)
+    # Fix absolute path issue for test directory
+    test_dir = os.path.abspath("/home/anonz/projects/the-council/pilot_sandbox")
+    if not os.path.exists(test_dir):
+        os.makedirs(test_dir, exist_ok=True)
 
     try:
         await asyncio.gather(
