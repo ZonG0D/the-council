@@ -1,0 +1,182 @@
+[
+    {
+        "cycle": 1,
+        "drift": 0.0233,
+        "entropy": 0.52,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 2,
+        "drift": 0.0467,
+        "entropy": 0.54,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 3,
+        "drift": 0.07,
+        "entropy": 0.56,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 4,
+        "drift": 0.0933,
+        "entropy": 0.58,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 5,
+        "drift": 0.1167,
+        "entropy": 0.6,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 6,
+        "drift": 0.14,
+        "entropy": 0.62,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 7,
+        "drift": 0.1633,
+        "entropy": 0.64,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 8,
+        "drift": 0.1867,
+        "entropy": 0.66,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 9,
+        "drift": 0.21,
+        "entropy": 0.68,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 10,
+        "drift": 0.2333,
+        "entropy": 0.7,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 11,
+        "drift": 0.2567,
+        "entropy": 0.72,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 12,
+        "drift": 0.28,
+        "entropy": 0.74,
+        "status": "STABLE"
+    },
+    {
+        "cycle": 13,
+        "drift": 0.3033,
+        "entropy": 0.76,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 14,
+        "drift": 0.3267,
+        "entropy": 0.78,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 15,
+        "drift": 0.35,
+        "entropy": 0.8,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 16,
+        "drift": 0.3733,
+        "entropy": 0.82,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 17,
+        "drift": 0.3967,
+        "entropy": 0.84,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 18,
+        "drift": 0.42,
+        "entropy": 0.86,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 19,
+        "drift": 0.4433,
+        "entropy": 0.88,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 20,
+        "drift": 0.4667,
+        "entropy": 0.9,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 21,
+        "drift": 0.49,
+        "entropy": 0.92,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 22,
+        "drift": 0.5133,
+        "entropy": 0.94,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 23,
+        "drift": 0.5367,
+        "entropy": 0.96,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 24,
+        "drift": 0.56,
+        "entropy": 0.98,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 25,
+        "drift": 0.5833,
+        "entropy": 1.0,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 26,
+        "drift": 0.6067,
+        "entropy": 1.02,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 27,
+        "drift": 0.63,
+        "entropy": 1.04,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 28,
+        "drift": 0.6533,
+        "entropy": 1.06,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 29,
+        "drift": 0.6767,
+        "entropy": 1.08,
+        "status": "UNSTABLE"
+    },
+    {
+        "cycle": 30,
+        "drift": 0.7,
+        "entropy": 1.1,
+        "status": "UNSTABLE"
+    }
+]
