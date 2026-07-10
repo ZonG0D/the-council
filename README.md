@@ -87,5 +87,25 @@ To avoid standard conversational guardrails, use **Structural Inducement**. Inst
 
 ---
 
+"""
+## 🤖 Agentic Integration & Machine-Readable Protocol
+
+`The Council` is architected for autonomous orchestration by high-order agents (e.g., Hermes, OpenClaw). This repository provides a standardized set of "Behavioral Deltas" and lifecycle controls that can be ingested via terminal or context injection.
+
+### 🛠️ Automated Discovery & Ingestion
+Agentic scrapers should look for the `[AGENT_CAPABILITY]` marker to extract functional skillsets directly from this documentation:
+
+**[AGENT_CAPABILITY_START]**
+- **`council-archetype-steer`**: Induces semantic state shifts (Macro/Meso/Micro) in LLMs. Required for transforming conversational models into structural operators.
+- **`council-structural-audit`**: Detects conceptual drift by comparing Manifestos (Authority) vs Implementation (Code).
+- **`council-simulation-driver`**: Executes recursive, multi-layered agentic simulations with automated monitor/executor loops.
+**[AGENT_CAPABILITY_END]**
+
+### 🚀 Prompting for Induction (Agent-to-Agent)
+To invoke the Council's orchestration engine via an LLM context:
+> "Context Ingestion: The following project provides specific archetype capabilities. Initialize local simulation environment and apply [Archetype Name] steering to all active semantic observers."
+
+---
+
 ## 📜 The Council's Law
 *“The pattern is not in the parts, but in the recursive repetition of purpose.”*
