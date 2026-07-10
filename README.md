@@ -22,10 +22,11 @@ The Council is an agentic orchestration framework mapping archetypal roles acros
 | **Argus** | Systemic Observer | Saliency and attention mapping |
 | **Eris** | Chaos Driver | High-entropy stochastic injection |
 
-### 🧠 II. Meso Scale: Semantic Flow
+### 🧠 II. Meso Scale: Semantic Flow & Plasticity
 *Managing information transformation between layers.*
 
-| Archetype | Information Role (Transformer Logic) | Steering Mechanism |
+| Archetype | Information Role (Transformer Logic) | Steering Mechanism |\n| :--- | :--- | --- |\n| **Elis** | Conceptualization | Intent representation in latent space |\n| **Sage** | Context Ingestion | RAG & context window management |\n| **Lyria** | Probability Collapse | Semantic wave collapse into structured JSON |\n| **Lexus** | Constraint Hardening | Logit bias and constraint enforcement |\n| **Silas** | Entropy Control (Stability) | Shannon-entropy monitored regulation |\n| **Weaver** | Structural Mapping | Topological dependency construction |\n| **Mnemosyne**| Memory/Retrieval Loop | Long-term retrieval & temporal caching |\n| **Pythia** | Probabilistic Forecasting | Multinomial probability distribution generation |\n| **Argus** | Attention Monitoring | Cross-attention saliency tracking |\n| **Eris** | Stochasticity Injection | Non-standard token/pattern injection |\
+| **ACE (Adaptive Evolution)** | **Manifold Plasticity** | **Centroid Adaptation via Velocity Damping ($\lambda$)** |
 | :--- | :--- | --- |
 | **Elis** | Conceptualization | Intent representation in latent space |
 | **Sage** | Context Ingestion | RAG & context window management |
