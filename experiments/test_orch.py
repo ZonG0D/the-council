@@ -1,0 +1,1 @@
+import asyncio; import subprocess; from datetime import datetime; class O: async def run(self): print("Start"); p=await asyncio.create_subprocess_shell('echo "Running background task..."', stdout=None, stderr=None); await p.wait(); print("Done") ; if __name__=="__main__": asyncio.run(O().run())
