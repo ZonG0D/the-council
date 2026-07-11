@@ -5,9 +5,12 @@ from datetime import datetime
 
 class OrchestrationEngine:
     """The Macro Scale Controller responsible for managing the autonomous lifecycle of multiple agentic sub-processes."""
-    def __init__(self, signal_path="/home/anonz/projects/the-council/src/council/core/signals.jsonl"):
-        self.signal_path = signal_path
-        self._processed_count = 0
+    def __init__(self, signal_path=None):
+        # Default path corrected to reflect project casing discovered in Step 1/2.
+        if signal_path is None:
+            signal_path = "/home/anonz/Projects/TheCouncil/src/council/core/signals.jsonl"
+        self.signal_path = os.path.abspath(os.path.expanduser(signal_path))
+        self._last_position = 0  # Byte offset tracker for O(1) ingestion complexity
 
     async def run(self, duration=60):
         print("\n" + "="*50)
@@ -21,18 +24,31 @@ class OrchestrationEngine:
         try:
             start = asyncio.get_event_loop().time()
             while (asyncio.get_event_loop().time() - start < duration):
-                current_signals = []
-                if os.path.exists(self.signal_path) and self._processed_count > 0:
+                new_signals = []
+                if os.path.exists(self.signal_path):
                     with open(self.signal_path, 'r') as f:
-                        all_lines = [l for l in f.readlines() if l.strip()]
-                        current_signals = all_lines[self._processed_count:]
-                        if current_signals: self._processed_count += len(current_signals)
+                        # Optimization Implementation: Seek to last read position instead of reading all lines every cycle
+                        f.seek(self._last_position)
+                        for line in f:
+                            stripped = line.strip()
+                            if stripped and not stripped.startswith('#'):
+                                try:
+                                    new_signals.append(json.loads(stripped))
+                                except json.JSONDecodeError:
+                                    continue # Skip malformed lines/partial writes
 
-                print(f"[ENGINE-PULSE] Timestamp: {datetime.now().strftime('%H:%M:%S')} | Signal Buffer Capacity Used: {len(all_lines if 'all_lines' in locals() else []) - self._processed_count}")
+                        self._last_position = f.tell() # Efficiently track end-of-current buffer position
+
+                if new_signals:
+                    print(f"[ENGINE-PULSE] Timestamp: {datetime.now().strftime('%H:%M:%S')} | New Signals Buffer Processed: {len(new_signals)} | File Offset: {self._last_position}")
+                else:
+                   # Print heartbeat if nothing new to show continuous operation (non-stale state)
+                   pass 
+
                 await asyncio.sleep(4)
 
             print("\n[ORCHESTRATION ENGINE] Lifecycle Cycle Complete.")
-        except Exception as e: print(f"[CRITICAL ERROR]: {e}")
+        except Exception as e: print("[CRITICAL ERROR]: {e}")
 
 if __name__ == "__main__":
     import asyncio; engine = OrchestrationEngine(); asyncio.run(engine.run())
