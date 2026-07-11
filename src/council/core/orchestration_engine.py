@@ -1,46 +1,38 @@
 import asyncio
+import json
 import os
 from datetime import datetime
 
 class OrchestrationEngine:
-    """The Macro Scale Controller for spawning and managing autonomous agent sub-tasks."""
-    def __init__(self, workspace="/home/anonz/projects/the-council"):
-        self.workspace = workspace
-        self._running_tasks = []
+    """The Macro Scale Controller responsible for managing the autonomous lifecycle of multiple agentic sub-processes."""
+    def __init__(self, signal_path="/home/anonz/projects/the-council/src/council/core/signals.jsonl"):
+        self.signal_path = signal_path
+        self._processed_count = 0
 
-    async def spawn_task(self, cmd: str, name: str):
-        """Spawns an asynchronous sub-process using correctly implemented asyncio primitives."""
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] [ORCHESTRATOR] Spawning Sub-Task: {name}")
+    async def run(self, duration=60):
+        print("\n" + "="*50)
+        print("ORCHESTRATION ENGINE: ONLINE [AUTONOMOUS LIFECYCLE ACTIVE]")
+        print("-" * 14 + "\n[MONITORING] Orchestrating unprompted task cascades...")
+
+        if not os.path.exists(self.signal_path):
+            os.makedirs(os.path.dirname(self.signal_path), exist_ok=True)
+            with open(self.signal_path, 'a') as f: pass 
+
         try:
-            # Using the correct method for non-blocking subprocess creation in async environments
-            process = await asyncio.create_subprocess_shell(cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-            self._running_tasks.append((process, name))
-            print(f"[ORCHESTRATOR] Task '{name}' initialized with PID: {process.pid}")
-            return process, name
-        except Exception as e:
-            print(f"[CRITICAL ORCHESTRATION ERROR]: Failed to spawn {name}: {e}")
-            return None, str(e)
+            start = asyncio.get_event_loop().time()
+            while (asyncio.get_event_loop().time() - start < duration):
+                current_signals = []
+                if os.path.exists(self.signal_path) and self._processed_count > 0:
+                    with open(self.signal_path, 'r') as f:
+                        all_lines = [l for l in f.readlines() if l.strip()]
+                        current_signals = all_lines[self._processed_count:]
+                        if current_signals: self._processed_count += len(current_signals)
 
-    async def run_sequence(self, duration=15):
-        """Executes a series of tasks in an unprompted management cycle."""
-        print("\n" + "="*48)
-        print("ORCHESTRATOR: COMMENCING AUTONOMOUS SEQUENCE")
-        print("-" * 48 + "\n[SEQUENCE START]")
+                print(f"[ENGINE-PULSE] Timestamp: {datetime.now().strftime('%H:%M:%S')} | Signal Buffer Capacity Used: {len(all_lines if 'all_lines' in locals() else []) - self._processed_count}")
+                await asyncio.sleep(4)
 
-        test_cmd = "python3 /home/anonz/projects/the-council/src/council/core/sentinel_runtime.py"
-        tasks_to_run = [(test_cmd, f"Sentinel_{i}") for i in range(2)]
-
-        active_processes = []
-        for cmd, name in tasks_to_run:
-            proc, proc_name = await self.spawn_task(cmd, name)
-            if proc: 
-                active_processes.append((proc, proc_name))
-
-        await asyncio.sleep(duration)               
-
-        print("\n==============================")
-        print("[ORCHESTRATOR] SEQUENCE PHASE COMPLETE.")
-        print("=" * 48 + "\n")
+            print("\n[ORCHESTRATION ENGINE] Lifecycle Cycle Complete.")
+        except Exception as e: print(f"[CRITICAL ERROR]: {e}")
 
 if __name__ == "__main__":
-    import asyncio; orch = OrchestrationEngine(); asyncio.run(orch.run_sequence())
+    import asyncio; engine = OrchestrationEngine(); asyncio.run(engine.run())
