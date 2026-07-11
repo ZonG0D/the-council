@@ -1,0 +1,6 @@
+{
+    "project_root": "/home/anonz/projects/the-council",
+    "signal_path": "/home/anonz/projects/the-council/src/council/core/signals.jsonl",
+    "cron_log": "/home/anonz/project_crons.log",
+    "experience_dir": "/home/anonz/experiments/"
+}
