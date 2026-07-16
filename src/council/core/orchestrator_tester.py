@@ -60,7 +60,7 @@ if __name__ == "__main__":
         orch = CouncilOrchestrator(manifest_path="README.md")
         # Normally members are injected; here we use the pattern from council_engine.py
         # But via a more robust dependency injection approach.
-        from council.core.council_engine import Elis, Lyria, Sage, Lexus, Silas, Weaver, Mnemosyne, Pythia, Argus, Hermes, Eris
+        from council.core.council_engine import Elis, Lyria, Sage, Lexus, Silas, Weaver, Mnemosyne, Pythia, Argus, Messenger, Eris
         orch.add_member(Elis())
         orch.add_member(Sage())
         orch.add_member(Lyria())
@@ -70,7 +70,7 @@ if __name__ == "__main__":
          orch.add_member(Mnemosyne())
          orch.add_member(Pythia())
          orch.add_member(Argus())
-         orch.add_member(Hermes())
+         orch.add_member(Messenger())
          orch.add_member(Eris())
 
         await orch.execute_cycle("Implement the ACE linkage.")

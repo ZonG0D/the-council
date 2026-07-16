@@ -33,7 +33,7 @@ class AutonomousMissionAlpha:
         await controller.start(duration=120) # 2-minute mission window!
 
     async def run(self):
-        # Standardizing all output to the log file for observation via Hermes Process API later.
+        # Standardizing all output to the log file for observation via Messenger Process API later.
         with open(self.log_file, 'w') as f:
             f.write(f"--- MISSION ALPHA START: {datetime.now().isoformat()} ---\n")
 

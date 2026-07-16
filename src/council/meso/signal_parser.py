@@ -14,7 +14,7 @@ except ImportError:
 class TopologyAwareParser:
     def __init__(self, manifest_path: str = None):
         self._valid_archetypes = {"Elis", "Sage", "Lyria", "Lexus", "Silas", "Weaver", 
-                                  "Mnemosyne", "Pythia", "Argus", "Hermes", "Eris"}
+                                  "Mnemosyne", "Pythia", "Argus", "Messenger", "Eris"}
         self._patterns = {
             "OBS": [
                 r"\[agent:(?P<agent>\w+)\] vector=\[(?P<vec>[^\]]+)\] entropy=(?P<ent>[\d\.]+)",

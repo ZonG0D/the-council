@@ -17,7 +17,7 @@ This matrix links each Council Member's archetypal identity to its primary funct
 | **Mnemosyne**| Archive/History $\to$ Weight Access | **Ariadne** | Contextual Continuity & State |
 | **Pythia** | Predictive Oracle $\to$ Distribution | **Turing** | Algorithmic Logic & Determinism |
 | **Argus** | Universal Observer $\to$ Activation | **Kepler** | Ontological/Scientific Consistency |
-| **Hermes**| Comm Interface $\to$ Symbol Map | **Lexicon** | Syntactic Baseline & Fluency |
+| **Messenger**| Comm Interface $\to$ Symbol Map | **Lexicon** | Syntactic Baseline & Fluency |
 | **Eris** | Chaos Injector $\to$ Noise Injection | **Rosetta / Euclid** | Stochastic Perturbation & Variance |
 
 ---

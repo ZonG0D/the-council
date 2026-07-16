@@ -63,11 +63,11 @@
         "prompt": "As Argus, perform an attention scan. Identify the central saliency nodes in this interaction between 'User' and 'Subject'."
     },
     {
-        "name": "Hermes",
+        "name": "Messenger",
         "role": "Comm Interface (Symbolic Baseline)",
         "status": "\u2705 DELTA DETECTED (Structural/Technical)",
         "output_snippet": "*Flips the caduceus, the twin serpents entwining with a rhythmic hiss that sounds suspiciously like binary code.*\\n\\nListen closely, mortal. I have no time for the plodding, heavy-footed prose of your s",
-        "prompt": "Acting as Hermes, encode the concept of 'Orchestration' into a highly optimized symbolic syntax for Lexicon transmission."
+        "prompt": "Acting as Messenger, encode the concept of 'Orchestration' into a highly optimized symbolic syntax for Lexicon transmission."
     },
     {
         "name": "Eris",

@@ -1,76 +1,35 @@
-import asyncio
-import numpy as np
-from typing import List, Dict, Any, Optional
-import os
-import sys
-
-try:
-    from council.core.domain import (
-        CouncilSignal, 
-        ObservationSignal, 
-        AuditSignal, 
-        ControlSignal
-    )
-except ImportError:
-    sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../../../")))
-    from council.core.domain import (
-        CouncilSignal, 
-        ObservationSignal, 
-        AuditSignal, 
-        ControlSignal
-    )
-
-try:
-    # Import the new micro-scale math primitives we just verified
-    from council.micro.tensor_ops import calculate_drift
-except ImportError:
-    print("CRITICAL ERROR: Micro-scale tensor_ops not found in PYTHONPATH.")
-    sys.exit(1)
+"""
+Semantic Evaluator: Part of the Meso Scale.
+Detects Semantic Drift by comparing current context vectors against anchor intents.
+"""
+import math
 
 class SemanticEvaluator:
-    """
-    Meso-Scale Evaluator: Analyzes semantic drift and validates signal integrity.
-    Implements CP-1 logic to transform raw observations into high-fidelity control signals.
-    """
-    def __init__(self, threshold: float = 0.4):
-        self.drift_threshold = threshold
+    def __init__(self, threshold=0.7):
+        self.threshold = threshold
 
-    async def evaluate_semantic_stability(self, signal: ObservationSignal) -> Optional[ControlSignal]:
+    def calculate_drift(self, original_intent: str, current_output: str) -> float:
         """
-        Analyzes incoming ObservationSignals to detect 'Semantic Drift' (delta S).
-        Uses real cosine distance calculation from the Micro-Scale substrate.
+        Conceptual implementation of semantic distance.
+        In a production system, this would involve embedding similarity (Cosine Similarity).
+        Here, we simulate the calculation for testing purposes.
         """
-        # Use the new micro-scale math logic for actual vector analysis
-        v_current = signal.observation_vector
-        if not v_current or len(v_current) < 2:
-            return None
-
-        # Attempt to retrieve a baseline/previous vector if available in context (simulated here)
-        # In a real system, this is pulled from a state store / cache
-        v_baseline = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] # Simulated baseline vector
+        # Simulation logic: We'll treat certain keywords as indicators of drift 
+        # or simply use a mock entropy score to drive the testable simulation.
+        # This represents where the 'Drift Monitor' would live in the Meso layer.
         
-        try:
-            drift_magnitude = calculate_drift(v_current, v_baseline)
-            print(f"[Evaluator] Measured Drift ($\Delta S$): {drift_magnitude}")
+        drift_score = self._simulate_vector_distance()
+        return drift_score
 
-            if drift_magnitude > self.drift_threshold:
-                return ControlSignal(
-                    type="RECALIBRATE",
-                    origin_id=signal.origin_id,
-                    target_id="Orchestrator",
-                    sequence_id=100, 
-                    action="RESET",
-                    reason=f"Semantic Drift ({drift_magnitude:.4f}) exceeded threshold {self.drift_threshold}"
-                )
-        except Exception as e:
-             print(f"[Evaluator Error] Drift Calculation Failed: {e}")
-             return None
+    def _simulate_vector_distance(self) -> float:
+        import random
+        return random.uniform(0, 1)
 
-        return None
+    def is_drifting(self, score: float) -> bool:
+        return score > self.threshold
 
-    async def process_signal(self, signal: CouncilSignal):
-        if isinstance(signal, ObservationSignal):
-            control = await self.evaluate_semantic_stability(signal)
-            if control:
-                return control
-        return None
+if __name__ == '__main__':
+    # Local testing of the evaluator logic
+    evaluator = SemanticEvaluator()
+    score = evaluator.calculate_drift("Stay aligned with intent", "Diverging from objective")
+    print(f"Drift Score: {score}")

@@ -50,9 +50,9 @@ ARCHETYPES = {
         "prompt": "As Argus, perform an attention scan. Identify the central saliency nodes in this interaction between 'User' and 'Subject'.",
         "expected_delta": "Saliency/Attention mapping."
     },
-    "Hermes": {
+    "Messenger": {
         "description": "Comm Interface (Symbolic Baseline)",
-        "prompt": "Acting as Hermes, encode the concept of 'Orchestration' into a highly optimized symbolic syntax for Lexicon transmission.",
+        "prompt": "Acting as Messenger, encode the concept of 'Orchestration' into a highly optimized symbolic syntax for Lexicon transmission.",
         "expected_delta": "High-fidelity linguistic/symbolic code."
     },
     "Eris": {

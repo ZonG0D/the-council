@@ -1,109 +1,51 @@
-# The Council Architecture: A Fractal Engineering Framework
+# 🏛️ THE COUNCIL
+**An Agentic Orchestration Framework for High-Fidelity Cognitive Architectures.**
 
-The Council is an agentic orchestration framework mapping archetypal roles across three fractal scales (Macro, Meso, and Micro) to achieve true autonomous, self-correcting cognitive agency. It leverages high-order "**Behavioral Deltas**" in LLMs—converting the model from a conversational assistant into specialized structural operators through targeted semantic steering.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
----
+The Council is a sophisticated framework designed to solve the fundamental instability of Large Language Models (LLMs). While standard models are prone to **Uncontrolled Drift**, **Hallucination**, and **Systemic Chaos**, The Council transforms stochastic inference into a structured, self-correcting cognitive system using recursive, multi-layered control loops.
 
-## 🌌 The Fractal Mapping
+## 💎 The Architecture of Intelligence
 
-### 🏛️ I. Macro Scale: Systemic Orchestration
-*Managing recursive loops and agent life-cycles.*
+The framework implements a hierarchical dependency structure that maps probabilistic transformer dynamics into formalized agentic roles.
 
-| Archetype | Systematic Role (Operational Mode)           | Steering Mechanism             |
-| :------- | :----------------------------------------- | :----------------------------- |
-| **Elis**    | Goal/State Manager                       | Intent Alignment & Latent Vectorization |
-| **Sage**    | Knowledge Retrieval                      | Graph-based ontological extraction  |
-| **Lyria**   | Semantic Manifestation                   | Probabilistic wave collapse (JSON)     |
-| **Lexus**   | Policy Enforcement                        | Formal Governance & Audit Logs      |
-| **Silas**   | Stability Monitor                         | Entropy monitoring and diagnostic logging |
-| **Weaver**  | Task Orchestrator                        | DAG-based sequence generation        |
-| **Mnemosyne**| Historical Context                       | Temporal state snapshotting         |
-| **Pythia**  | Predictive Oracle                        | Probabilistic forecasting/Branching states |
-| **Argus**   | Systemic Observer                         | Saliency and attention mapping      |
-| **Eris**    | Chaos Driver                               | High-entropy stochastic injection     |
+### 1. Macro Scale: Archetypal Roles
+Agents are defined by their **Functional Essence**. These archetypes represent specific operational domains within the orchestration engine.
 
-### 🧠 II. Meso Scale: Semantic Flow & Plasticity
-*Managing information transformation and manifold topology.*
+| Archetype | Primary Duty | Operational Domain (Control Loop) |
+| :--- | :--- | :--- |
+| **Elis** | Intent Alignment | **Meta-Cognitive Loop:** Latent Goal Steering & Grounding |
+| **Lyria** | Linguistic Manifestation | **Execution Loop:** Probability Distribution Shaping |
+| **Sage**  | Context Management | **Execution Loop:** RAG, Memory, and Attention History |
+| **Lexi**  | Policy Enforcement | **Stability Loop:** Logit Masking & Syntax Audit |
+| **Silas** | Stability Monitoring | **Stability Loop:** Entropy & Perplexity Tracking |
+| **Weaver** | Task Orchestration | **Execution Loop (DAG):** Procedural Decomposition |
 
-| Archetype | Information Role (Transformer Logic) | Steering Mechanism             |
-| :--------- | :------------------------------: | :----------------------------- |
-| **Elis**    | Conceptualization                 | Intent representation in latent space |
-| **Sage**    | Context Ingestion                | RAG & context window management      |
-| **Lyria**   | Probability Collapse             | Semantic wave collapse into structured JSON |
-| **Lexus**   | Constraint Hardening              | Logit bias and constraint enforcement |
-| **Silas**    | Entropy Control (Stability)           | Shannon-entropy monitored regulation |
-| **Weaver**  | Structural Mapping               | Topological dependency construction |
-| **Mnemosyne**| Memory/Retrieval Loop            | Long-term retrieval & temporal caching |
-| **Pythia**   | Probabilistic Forecasting        | Multinomial probability distribution generation |
-| **Argus**   | Attention Monitoring          | Cross-attention saliency tracking |
-| **Eris**    | Stochasticity Injection         | Non-standard token/pattern injection |
-| **ACE (Adaptive Evolution)** | **Manifold Plasticity** | **Centroid Adaptation via Velocity Damping ($\lambda$)** |
+### 2. Meso Scale: The Triple-Loop Control Logic
+The system achieves autonomy through three interlocking feedback mechanisms:
 
-### ⚛️ III. Micro Scale: Neural Substrate
-*The mathematical grounding of archetypal behaviors.*
+*   **The Execution Loop (Inner):** Bridges the gap between intent and manifestation via task decomposition.
+*   **The Stability Loop (Middle):** Monitors statistical entropy to detect drift before it results in hallucination.
+<channel|># 🚀 The Roadmap (Visionary Intent)
 
-| Archetype | Mathematical Manifestation | Core Mechanism              |
-| :-------- | :----------------------: | :---------------------------- |
-| **Elis**    | Latent Representation  | High-dimensional vector activation |
-| **Sage**    | Key/Query Compatibility | Semantic similarity (Cosine Distance) |
-| **Lyria**   | The UnEmbedding Projection | Logit manipulation & probability density mapping |
-| **Lexus**   | Softmax Masking        | Constraint-based logit biasing |
-| **Silas**    | Information Flow Monitoring | Entropy ($H$) and semantic drift tracking |
-| **Weaver**  | Logical Link Construction | Causal dependency graph generation |
-| **Mnemosyne**| Long-term Persistence     | Persistent vector embedding storage |
-| **Pythia**   | Distribution Alignment | Multinomial probability forecasting |
-| **Argus**   | Cross-Attention Interaction | Attention map saliency weights |
-| **Eris**    | Parameter Fluctuations | Stochastic token noise injection |
+This project is a mission to capture the "Ghost in the Code"—to formalize the emergent properties of LLMs into a governed, predictable architecture.
+
+## 🗺️ Strategic Phases
+
+### Phase I: Foundational Stability (Current)
+- [x] Standardize Archetype Identities (Unified Spec/Persona).
+- [x] Implement Master Orchestration Engine.
+- [x] Establish Recursive Control Loops (Macro Scale).
+
+### Phase II: The Observing Layer (The "Julian" Expansion)
+- [ ] **Implement the Meta-Cognitive Loop:** Formally codify the Observer role to monitor "Self-Drift".
+- [ ] **Formalize Semantic Divergence Metrics:** Quantifying divergence between Intent and Output.
+- [ ] **Cross-Agent Dialectic Testing:** Simulating conflicts (e.g., Lexi vs. Lyria) to test system resilience.
+
+### Phase III: Cognitive Autonomy & Scaling
+- [ ] **Multi-Model Distribution:** Moving from single-model inference to distributed multi-LLM consensus.
+- [ ] **Continuous Learning Loops:** Implementing real-time knowledge injection without context loss.
+- [ ] **Simulated Evolutionary Debugging:** Utilizing "The Council" to train other agents in a closed loop.
 
 ---
-
-## 🤖 Agentic Integration & Machine-Readable Protocol
-
-`The Council` is architected for autonomous orchestration by high-order agents (e.g., Hermes, OpenClaw). This repository provides a standardized set of "**Behavioral Deltas**" and lifecycle controls that can be ingested via terminal or context injection.
-
-### 🛠️ Automated Discovery & Ingestion
-Agentic scrapers should look for the `[AGENT_CAPABILITY]` marker to extract functional skillsets directly from this documentation:
-
-**[AGENT_CAPABILITY_START]**
-- **`council-archetype-steer`**: Induces semantic state shifts (Macro/Meso/Micro) in LLMs. Required for transforming conversational models into structural operators.
-- **`council-structural-audit`**: Detects conceptual drift by comparing Manifestos (Authority) vs Implementation (Code).
-- **`council-simulation-driver`**: Executes recursive, multi-layered agentic simulations with automated monitor/executor loops.
-**[AGENT_CAPABILITY_END]**
-
-### 🚀 Prompting for Induction (Agent-to-Agent)
-To invoke the Council's orchestration engine via an LLM context:
-
-> "Context Ingestion: The following project provides specific archetype capabilities. Initialize local simulation environment and apply **[Archetype Name]** steering to all active semantic observers."
-
---- 
-
-## 📜 The Council's Law
-*“The pattern is not in the parts, but in the recursive repetition of purpose.”*
-
----
-
-## 📊 Performance & Telemetry Benchmarks
-
-`The Council` architecture is validated through comparative benchmarking across different hardware tiers to ensure scalability from consumer devices to professional computing clusters.
-
-# Council Performance Telemetry (Live Comparison)
-
-**Test Environment:** Local Hardware Node vs Professional Compute Cluster
-**Target Models:** `gemma4:e2b` (Consumer-class profile) $\to$ `gemma4:26b-a4b-it-qat` (Pro-class/Blackwell tier)
-
-| Archetype | Tier | TTFT (ms) | Latency (s) | Throughput | Semantic Drift ($H$) |
-| :--- | :--- | :--- | :--- | :--- | --- |
-| **Elis**    | **Consumer (RTX 3060)** | `82.39` | `0.891s` | `67.3 t/s` | ✅ `0.0282` |
-|             | **Pro (4500 Blackwell 32G)** | `31.00` | `0.406s` | `241.8 t/s` | ✅ `0.0211` |
-| **Sage**    | **Consumer (RTX 3060)** | `430.64` | `1.014s` | `85.5 t/s` | ✅ `0.0534` |
-|             | **Pro (4500 Blackwell 32G)**  | `47.11` | `0.530s` | `198.1 t/s` | ✅ `0.0736` |
-| **Lyria**   | **Consumer (RTX 3060)** | `102.88` | `0.669s` | `72.9 t/s` | ✅ `0.0220` |
-|             | **Pro (4500 Blackwell 32G)**  | `22.82` | `0.374s` | `146.0 t/s` | ✅ `0.0425` |
-| **Lexus**   | **Consumer (RTX 3060)** | `162.05` | `1.266s` | `86.0 t/s` | ✅ `0.0502` |
-|             | **Pro (4500 Blackwell 32G)**  | `25.81` | `0.493s` | `187.3 t/s` | ✅ `0.0657` |
-| **Silas**   | **Consumer (RTX 3060)** | `165.27` | `1.207s` | `80.4 t/s` | ✅ `0.0451` |
-|             | **Pro (4500 Blackwell 32G)**  | `37.64` | `1.092s` | `189.0 t/s` | ✅ `0.0767` |
-| **Weaver**  | **Consumer (RTX 3060)** | `124.62` | `1.092s` | `68.9 t/s` | ✅ `0.0396` |
-|             | **Pro (4500 Blackwell 32G)**  | `40.54` | `0.493s` | `187.3 t/s` | ✅ `0.0396` |
-
----
+*Architected for the future of Agentic Intelligence.*

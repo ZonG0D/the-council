@@ -1,0 +1,30 @@
+{
+    "version": "0.1.1",
+    "last_active": "2024-07-16T12:00:00Z",
+    "configured_archetypes": [
+        "Elis",
+        "Lyria",
+        "Sage",
+        "Lexi",
+        "Silas",
+        "Weaver"
+    ],
+    "providers": {
+        "local_mock": {
+            "name": "Local Mock Provider",
+            "class": "MockProvider",
+            "active": true,
+            "base_url": "localhost"
+        },
+        "ollama": {
+            "name": "Ollama API",
+            "class": "OllamaProvider",
+            "base_url": "http://localhost:11434",
+            "active": false
+        }
+    },
+    "active_model": {
+        "name": "gemma-4:26b-a4b-it-qat",
+        "provider": "local_mock"
+    }
+}

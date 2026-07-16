@@ -47,3 +47,14 @@ To maintain **Systemic Precision**, all signals must respect the following:
 
 ---
 *Spec finalized via RAR Protocol: Phase 2 - Documentation/Schema Update.*
+
+
+### [META-SIGNAL] Julian Recalibration (JRC-1)
+*   **Source:** Meta-Cognitive Loop
+*   **Target:** Macro Orchestrator / Core Engine
+*   **Purpose:** Immediate state reset to prevent systemic drift or semantic collapse.
+
+
+### [META-SIGNAL] Noah Drift (N-DRIVE)
+* **Trigger:** Loss of long-range context coherence.
+* **Target:** Root Orchestrator / Meta-Cognitive Loop.

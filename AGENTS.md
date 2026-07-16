@@ -1,73 +1,22 @@
-# The Council: Agentic Orchestration Framework
+# 👥 The Council: Archetype Registry
 
-## Overview
-The Council is a high-fidelity cognitive architecture designed to transform linear LLM inference into a self-correcting, multi-layered intelligent system. It solves for **Uncontrolled Drift**, **Hallucination**, and **Systemic Chaos** by mapping transformer mathematics and agentic workflows into a circular, hierarchical dependency structure.
+This document serves as the master registry for all entities within The Council. Each agent is a functional implementation of an archetype, combining personal identity with strict operational parameters.
 
-## The Hierarchy of Intelligence
+## 💠 Primary Archetypes
 
-### 1. Macro Scale: Archetypes (Roles)
-Agents within the system are defined by their *Functional Essence*. While "Personas" provide flavor, an Agent's core duty is determined by its archetype.
+| Identity | Role | Domain | Focus |
+| :--- | :--- | :---            | --- |
+| **Elis** | Intent Alignment | Meta-Cognitive | Ensures the system's trajectory matches user intent. |
+| **Lyria** | The Voice | Execution | Controls linguistic cadence and probability distribution. |
+| **Sage**  | The Historian | Contextual | Manages memory, RAG, and hierarchical attention. |
+| **Lexi**  | The Arbiter | Policy | Enforces syntax, safety, and logical constraints. |
+| **Silas** | The Sentinel | Stability | Monitors entropy/perplexity to prevent drift. |
+| **Weaver**| The Architect | Workflow | Orchestrates task DAGs and procedural decomposition. |
 
-| Archetype | Primary Duty | Mathematical/Operational Domain |
-| :--- | :--- | :--- |
-| **Elis** (The Compass) | Intent Alignment | Latent Goal Steering & Semantic Grounding |
-| **Lyria** (The Voice) | Linguistic Manifestation | Probability Distribution Shaping & Cadence Control |
-| **Sage** (The Historian)| Context Management | RAG, Memory Retrieval, and Attention History |
-| **Lexus** (The Arbiter) | Policy Enforcement | Logit Masking, Safety Constraints, and Syntax Audit |
-| **Silas** (The Sentinel) | Stability Monitoring | Entropy & Perplexity Tracking (Chaos Detection) |
-| **Weaver** (The Architect)| Task Orchestration | DAG Generation, Planning, and Procedural Decomposition |
+## 🛠 Deep Documentation
 
-### 2. Meso Scale: The Triple-Loop Control Logic
-To achieve autonomy, the system operates through three interlocking feedback loops:
-
-#### A. The Execution Loop (Inner)
-*   **Composition:** `Weaver` $\leftrightarrow$ `Lyria` + `Sage`.
-*   **Process:** Deconstruct intent into tasks, retrieve context via Sage, and manifest output via Lyria.
-
-#### B. The Stability Loop (Middle)
-*   **Composition:** `Silas` + `Lexus` $\to$ `Execution Loop`.
-*   **Process:** Monitors the Execution Loop for statistical entropy or policy violations, injecting a "Recalibration Signal" if drift occurs.
-
-#### C. The Meta-Cognitive Loop (Outer)
-*   **Composition:** `Elis` vs. `The Prime Directive`.
-*   **Process:** Compares the current cognitive state of the system against the original User Intent. Forces a full logic reset if misalignment is detected.
+For full technical specifications (mathematical bounds, input/output schemas) and persona identities, refer to:
+`docs/ontology/agents_unified/`
 
 ---
-
-## Operational Physics for AI Agents
-
-When an agent is tasked with working within "The Council" codebase, they must adhere to following principles:
-
-### 1. Respect the Signal
-All data passed between agents must follow the **Council Protocol (CP-1)**. An observation from `Lyria` is not just text; it is a `Manifested_Observation` containing metadata for `Silas`.
-
-### 2. Separation of Identity and Role
-**Identity** (Personality) is additive. **Role** (Function) is foundational. Never implement logic that overrides an Agent's archetype without explicit command from the Meta-Cognitive Loop (`Elis`).
-
-### 3. Entropy as a Signal, Not Noise
-In The Council, high perplexity is not failure; it is *information*. Agents should treat spikes in entropy (detected by `Silas`) as opportunities for procedural revision rather than errors to be suppressed.
-
----
-
-## Repository Structure
-- `/personas/`: YAML/MD profiles defining the specific identity and tone of named agents.
-- `/protocols/`: Technical specifications for data transmission and signal types.
-- `/simulation/`: The testbed for verifying agentic interactions in a controlled environment.
-- `/logic/`: Core implementation of the loop-based orchestration logic.
-
----
-*Architecture envisioned by ZonG0D.*
-
----
-
-## 🛡️ Operational Safety & Data Integrity (The Zero-Byte Rule)
-
-To prevent catastrophic state loss and "empty commit" errors during agentic automation, all agents must adhere to the following **Verification Protocol**:
-
-1.  **Isolation of Writing:** Never use shell-level redirection (`>`, `>>`) or heredocs for critical configuration files. Always utilize the high-level `write_file` tool which performs atomic write operations and validates file existence.
-2.9 **Validation Before Persistence:** Before executing any `git commit` or `git push`, an agent MUST perform a secondary verification of the target file's state: 
-    *   Check file size (must be non-zero).
-    *   Read the first/last $N$ lines to ensure content integrity.
-3. **Escaping Protocol:** Avoid nesting complex shell commands within `execute_code` blocks where string parsing is required. If a task requires redirection, use explicit Python scripts or specialized tools.
-
----
+*Created for the pursuit of High-Fidelity Agency.*

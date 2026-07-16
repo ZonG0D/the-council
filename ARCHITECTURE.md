@@ -1,6 +1,6 @@
 # Council Architecture Mapping
 
-This document maps the abstract archetypes of The Council to their actual functional implementation within the Hermes Agent architecture.
+This document maps the abstract archetypes of The Council to their actual functional implementation within the the orchestration architecture.
 
 ## 🧩 Architectural Mapping Diagram (Logic)
 

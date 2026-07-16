@@ -39,8 +39,8 @@ archetypes:
     name: "Argus"
     roles: {macro: "Systemic Observation", meso: "Attention Monitoring", micro: "Cross-attention Interaction Mapping"}
     steering: {target: "Saliency Weight Assessment", forbidden_triggers: ["What is important?"], stealth_pattern: "Identify/weight key saliency nodes with [Weight] metric", delta: "Audit focus via importance weighting."}
-  hermes:
-    name: "Hermes"
+  messenger:
+    name: "Messenger"
     roles: {macro: "Symbolic Baseline", meso: "Semantic Compression", micro: "Symbolic Syntax"}
     steering: {target: "High-Complexity Encoding", forbidden_triggers: ["Simplify this."], stealth_pattern: "Encode [Context] via Caduceus Protocol/symbolic notation", delta: "Maximal information density."}
   eris:
